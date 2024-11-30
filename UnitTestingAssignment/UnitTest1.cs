@@ -1,5 +1,3 @@
-using System.Net.Http.Headers;
-
 namespace UnitTestingAssignment
 {
     public class Tests
@@ -7,13 +5,14 @@ namespace UnitTestingAssignment
         private FizzBuzz fizzBuzz;
         private LeapYear leapYear;
         private CalcStats calcStats;
-        private int[] inputData = { 1, 4, -3, -6, 17, 5235, -77, 5, 41, 8};
+        private int[] inputData = { 1, 4, -3, -6, 17, 525, -77, 5, 41, 8};
+
         [SetUp]
         public void Setup()
         {
             fizzBuzz = new FizzBuzz();
             leapYear = new LeapYear();
-            calcStats = new CalcStats()
+            calcStats = new CalcStats();
         }
 
         [Test]
@@ -59,14 +58,14 @@ namespace UnitTestingAssignment
         [Test]
         public void CalcStatShouldReturnAvgValue()
         {
-            int result = calcStats.GetAvgResult(inputData);
-            Assert.AreEqual(2, result);
+            double result = calcStats.GetAvgResult(inputData);
+            Assert.AreEqual(51.5, result);
         }
 
         [Test]
         public void CalcStatShouldReturnNumberOfValues()
         {
-            int result = calcStats.GetMinResult(inputData);
+            int result = calcStats.GetLengthResult(inputData);
             Assert.AreEqual(10, result);
         }
     }

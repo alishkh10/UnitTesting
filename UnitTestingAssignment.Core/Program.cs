@@ -36,4 +36,61 @@
             }
         }
     }
+
+    public class CalcStats
+    {
+        public int GetMinResult(int[] numbers)
+        {
+            int min = int.MaxValue;
+
+            foreach (int num in numbers)
+            {
+                if (num < min)
+                {
+                    min = num;
+                }
+            }
+
+            return min;
+        }
+
+        public int GetMaxResult(int[] numbers)
+        {
+            int max = int.MinValue;
+
+            foreach (int num in numbers)
+            {
+                if (num > max)
+                {
+                    max = num;
+                }    
+            }
+
+            return max;
+        }
+
+        public int GetLengthResult(int[] numbers)
+        {
+            int count = 0;
+
+            foreach (var num in numbers)
+            {
+                count++;
+            }
+
+            return count;
+        }
+
+        public double GetAvgResult(int[] numbers)
+        {
+            double sum = 0;
+
+            foreach (int num in numbers)
+            {
+                sum += num;
+            }
+
+            return sum / GetLengthResult(numbers);
+        }
+    }
 }
