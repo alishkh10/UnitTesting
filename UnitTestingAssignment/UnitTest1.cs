@@ -2,10 +2,10 @@ namespace UnitTestingAssignment
 {
     public class Tests
     {
+        private int[] inputData = { 1, 4, -3, -6, 17, 525, -77, 5, 41, 8 };
         private FizzBuzz fizzBuzz;
         private LeapYear leapYear;
         private CalcStats calcStats;
-        private int[] inputData = { 1, 4, -3, -6, 17, 525, -77, 5, 41, 8};
 
         [SetUp]
         public void Setup()
@@ -52,7 +52,7 @@ namespace UnitTestingAssignment
         public void CalcStatShouldReturnMaxValue()
         {
             int result = calcStats.GetMaxResult(inputData);
-            Assert.AreEqual(5235, result);
+            Assert.AreEqual(525, result);
         }
 
         [Test]
