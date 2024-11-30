@@ -32,10 +32,10 @@ namespace UnitTestingAssignment
         [Test]
         public void LeapYearShouldReturnCorrectValue()
         {
-            Assert.AreEqual(true, leapYear.GetLearYearResult(2024));
-            Assert.AreEqual(true, leapYear.GetLearYearResult(1024));
-            Assert.AreEqual(false, leapYear.GetLearYearResult(2025));
-            Assert.AreEqual(false, leapYear.GetLearYearResult(1025));
+            Assert.AreEqual(true, leapYear.GetLeapYearResult(2024));
+            Assert.AreEqual(true, leapYear.GetLeapYearResult(1024));
+            Assert.AreEqual(false, leapYear.GetLeapYearResult(2025));
+            Assert.AreEqual(false, leapYear.GetLeapYearResult(1025));
         }
     }
 }

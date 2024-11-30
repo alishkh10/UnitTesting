@@ -2,6 +2,7 @@
 {
     public class FizzBuzz
     {
+        public static void Main() { }
         public string GetFizzBuzz(int number)
         {
             if (number < 1 || number > 100)
@@ -12,7 +13,27 @@
             if (number % 5 == 0) return "Buzz";
             return number.ToString();
         }
-        public static void Main()
-        { }
+    }
+    public class LeapYear
+    {
+        public bool GetLeapYearResult(int year)
+        {
+            if (year % 400 == 0)
+            {
+                return true;
+            }
+            else if (year % 100 == 0)
+            {
+                return false;
+            }
+            else if (year % 4 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
