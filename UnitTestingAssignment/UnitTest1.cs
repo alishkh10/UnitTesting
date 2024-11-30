@@ -3,11 +3,13 @@ namespace UnitTestingAssignment
     public class Tests
     {
         private FizzBuzz fizzBuzz;
+        private LeapYear leapYear;
 
         [SetUp]
         public void Setup()
         {
             fizzBuzz = new FizzBuzz();
+            leapYear = new LeapYear();
         }
 
         [Test]
@@ -25,6 +27,15 @@ namespace UnitTestingAssignment
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => fizzBuzz.GetFizzBuzz(101));
             Assert.Throws<ArgumentOutOfRangeException>(() => fizzBuzz.GetFizzBuzz(0));
+        }
+
+        [Test]
+        public void LeapYearShouldReturnCorrectValue()
+        {
+            Assert.AreEqual(true, leapYear.GetLearYearResult(2024));
+            Assert.AreEqual(true, leapYear.GetLearYearResult(1024));
+            Assert.AreEqual(false, leapYear.GetLearYearResult(2025));
+            Assert.AreEqual(false, leapYear.GetLearYearResult(1025));
         }
     }
 }
